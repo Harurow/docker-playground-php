@@ -1,0 +1,13 @@
+version: '3'
+services:
+  playground:
+    container_name: 'php'
+    hostname: 'php'
+    build: .
+    restart: always
+    working_dir: '/workspace'
+    tty: true
+    volumes:
+      - type: bind
+        source: ../workspace
+        target: /workspace
